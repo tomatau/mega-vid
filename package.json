@@ -2,7 +2,8 @@
   "name": "mega-vid",
   "version": "0.0.0",
   "dependencies": {
-    "gulp-ngmin": "^0.3.0"
+    "gulp-ngmin": "^0.3.0",
+    "gulp-print": "^1.1.0"
   },
   "devDependencies": {
     "connect": "^2.14.4",
