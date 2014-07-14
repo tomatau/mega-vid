@@ -31,6 +31,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     return gulp.src('app/*.html')
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
+        .pipe($.ngmin())
         .pipe($.uglify())
         .pipe(jsFilter.restore())
         .pipe(cssFilter)
@@ -131,4 +132,9 @@ gulp.task('watch', ['connect', 'serve'], function () {
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
+});
+
+gulp.task('deploy', function () {
+    gulp.src("./dist/**/*")
+        .pipe($.ghPages());
 });
