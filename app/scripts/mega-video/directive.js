@@ -11,7 +11,9 @@ angular.module('mega-video', [])
                         mp4Src: { type: 'video/mp4' },
                         oggSrc: { type: 'video/ogg' },
                     }).chain()
-                    .filter(function(srce){ return srce != null; })
+                    .filter(function(srce){
+                        return attr[srce] != null;
+                    })
                     .map(function(key, sourceType, arr){
                         return {
                             src: $sce.trustAsResourceUrl(attr[key])

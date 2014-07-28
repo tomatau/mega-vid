@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "dependencies": {
     "gulp-ngmin": "^0.3.0",
-    "gulp-print": "^1.1.0"
+    "gulp-print": "^1.1.0",
+    "jasmine-expect": "^1.22.0",
+    "jasmine-sinon": "^0.3.0",
+    "sinon-browser-only": "^1.9.0"
   },
   "devDependencies": {
+    "chai": "^1.9.1",
     "connect": "^2.14.4",
     "connect-livereload": "^0.4.0",
     "gulp": "^3.6.0",
@@ -26,6 +30,11 @@
     "gulp-uglify": "^0.2.1",
     "gulp-useref": "^0.4.2",
     "jshint-stylish": "^0.2.0",
+    "karma": "^0.12.19",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
+    "karma-ng-html2js-preprocessor": "^0.1.0",
     "opn": "^0.1.1",
     "wiredep": "^1.4.3"
   },

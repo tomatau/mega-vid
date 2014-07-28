@@ -5,7 +5,8 @@
     "bootstrap-sass-official": "~3.1.1",
     "jquery": "~1.11.0",
     "angular": "~1.2.20",
-    "valentine": "~2.0.2"
+    "valentine": "~2.0.2",
+    "angular-mocks": "~1.2.21"
   },
   "devDependencies": {}
 }
