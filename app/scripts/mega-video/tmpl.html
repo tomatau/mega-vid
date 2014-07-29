@@ -1,10 +1,17 @@
 <video controls
-    width="{{ video.width }}" 
-    height="{{ video.height }}"
+    width="{{ width }}" 
+    height="{{ height }}"
     ng-click="video.togglePlay()" 
     ng-dblclick="video.stop()">
-    <source ng-repeat="source in sources" 
-            ng-src="{{ source.src }}" 
-            type="{{ source.type }}" >
+    <!-- 
+        'this' would wrap it in namespace, but how much will it make a difference
+        $source doesn't, but more private
+     -->
+    <source ng-repeat="s in sources" 
+            ng-src="{{ s.src }}" 
+            type="{{ s.type }}" >
     </source>
 </video>
+<aside ng-transclude>
+    <!-- Transclude -->
+</aside>

@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="bower_components/bootstrap-slider/slider.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
@@ -14,20 +15,14 @@
 
         <div class="container" ng-controller="Ctrl">
             <h4>Editable</h4>
-            <div editme>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero neque error ut unde et esse iusto ullam quis blanditiis quae. Ullam ea, voluptates dolorum repellat nobis beatae excepturi saepe soluta!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero neque error ut unde et esse iusto ullam quis blanditiis quae. Ullam ea, voluptates dolorum repellat nobis beatae excepturi saepe soluta!</p>
-            </div>
+            <div editme> <p>Hello</p> </div>
             <h4>Video</h4>
-            <megavideo
-                mp4-src="http://samples.mplayerhq.hu/MPEG-4/MPEG4%20by%20philips.mp4"
-                ogg-src="http://samples.mplayerhq.hu/ogg/Vorbis/coyote.ogg"
-                width="500px">
-            </megavideo>
             <megavideo
                 ogg-src="https://ia600500.us.archive.org/1/items/Duck_and_Cover/1951_duck_and_cover.ogv" 
                 mp4-src="https://archive.org/download/Duck_and_Cover/1951_duck_and_cover_512kb.mp4"
                 width="500px">
+                <video-slider initial-volume="2">
+                </video-slider>
             </megavideo>
         </div>
 
@@ -36,6 +31,8 @@
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/valentine/valentine.js"></script>
+        <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+        <script src="bower_components/bootstrap-slider/bootstrap-slider.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
