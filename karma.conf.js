@@ -25,6 +25,7 @@ module.exports = function(config) {
       'app/bower_components/valentine/valentine.js',
       'app/bower_components/jquery/dist/jquery.js',
       'app/bower_components/angular/angular.js',
+      'app/bower_components/bootstrap-slider/bootstrap-slider.js',
       // testing deps
       'app/bower_components/angular-mocks/angular-mocks.js',
       // tests
@@ -32,7 +33,7 @@ module.exports = function(config) {
       'app/tests/**/*.js',
 
       // tmplates
-      'app/scripts/**/tmpl.html'
+      'app/scripts/**/*.html'
     ],
 
 
@@ -44,7 +45,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/**/tmpl.html': 'html2js'
+      'app/**/*.html': 'html2js'
     },
 
     ngHtml2JsPreprocessor: {

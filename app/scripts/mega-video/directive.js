@@ -1,9 +1,9 @@
 angular.module('mega-video', [])
-            // scope on both is consistent
-            // controller can give itself to link via scope
-            // controller can sort of give itself to everything via this
-            // this is inconvenient in link but possible
-            // this is available easily in child controllers
+    // $scope is scope, ctrl happens before link
+    // $scope is easy in tmpl but no namespacing
+    // ctrl 'this' has namespacing in tmpl
+    // ctrl 'this' can linkFn scope[controllerAs] but inconvenient
+    // ctrl 'this' is available easily in child controllers
     .directive('megavideo', function ($sce) {
         return {
             restrict: 'E',
@@ -14,7 +14,6 @@ angular.module('mega-video', [])
             link: function (scope, elem, attr) {
                 scope.height = attr.height || "";
                 scope.width = attr.width || "";
-                // controller 'this' is at scope.video
                 scope.sources = v({
                         webmSrc: { type: 'video/webm' },
                         mp4Src: { type: 'video/mp4' },
@@ -26,11 +25,9 @@ angular.module('mega-video', [])
                             src: $sce.trustAsResourceUrl(attr[key]),
                             type: sourceType.type,
                         };
-                    })
-                    .value();
+                    }).value();
             },
             controller: function ($scope, $element) {
-                // this.sources = sources;
                 var player = $element.find('video')[0],
                     status;
                 angular.extend(this, {
